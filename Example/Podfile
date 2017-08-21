@@ -1,0 +1,11 @@
+use_frameworks!
+
+target 'SwiftFeedReader_Example' do
+  pod 'SwiftFeedReader', :path => '../'
+
+  target 'SwiftFeedReader_Tests' do
+    inherit! :search_paths
+
+    
+  end
+end
