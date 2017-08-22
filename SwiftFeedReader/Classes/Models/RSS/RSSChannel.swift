@@ -11,35 +11,133 @@ public struct RSSChannel {
     
     /// Required Parameters
     
-    /*
-         The name of the channel. It's how people refer to your service. If
-         you have an HTML website that contains the same information as your RSS file,
-         the title of your channel should be the same as the title of your website.
-     
-         Example: GoUpstate.com News Headlines
-    */
+    /// The name of the channel. It's how people refer to your service. If
+    /// you have an HTML website that contains the same information as your RSS file,
+    /// the title of your channel should be the same as the title of your website.
+    ///
+    /// Example: GoUpstate.com News Headlines
     public let title: String
+    static let _title = NamedParameter(apiDescription: "The name of the channel.",
+                                       key: "title",
+                                       parameter: String.parameter)
     
-    /*
-         The URL to the HTML website corresponding to the channel.
-     
-         Example: http://www.goupstate.com/
-    */
-    public let link: String
+    /// The URL to the HTML website corresponding to the channel.
+    ///
+    /// Example: http://www.goupstate.com/
+    public let link: URL
+    static let _link = NamedParameter(apiDescription: "The URL to the HTML website corresponding to the channel.",
+                                      key: "link",
+                                      parameter: URL.parameter)
     
-    /*
-     Phrase or sentence describing the channel.
-     
-     Example: The latest news from GoUpstate.com, a Spartanburg Herald-Journal
-     Web site.
-     */
+    /// Phrase or sentence describing the channel.
+    ///
+    /// Example: The latest news from GoUpstate.com, a Spartanburg Herald-Journal
+    /// Web site.
     public let description: String
+    static let _description = NamedParameter(apiDescription: "Phrase or sentence describing the channel.",
+                                             key: "description",
+                                             parameter: String.parameter)
     
     /// Optional Parameters
     
-    
+    /// The language the channel is written in. This allows aggregators to group
+    /// all Italian language sites, for example, on a single page.
+    ///
+    /// Example: en-us
     public let language: Language?
+    static let _language = NamedParameter(apiDescription: "The language the channel is written in.",
+                                          key: "language",
+                                          parameter: Language.parameter).optional
+    
+    /// Copyright notice for content in the channel.
+    ///
+    /// Example: Copyright 2002, Spartanburg Herald-Journal
     public let copyright: String?
+    static let _copyright = NamedParameter(apiDescription: "Copyright notice for content in the channel.",
+                                           key: "copyright",
+                                           parameter: String.parameter).optional
+    
+    /// Email address for person responsible for editorial content.
+    ///
+    /// Example: geo@herald.com (George Matesky)
     public let managingEditor: String?
+    static let _managingEditor = NamedParameter(apiDescription: "Email address for person responsible for editorial content.",
+                                                key: "managingEditor",
+                                                parameter: String.parameter).optional
+    
+    /// Email address for person responsible for technical issues relating to channel.
+    ///
+    /// Example: betty@herald.com (Betty Guernsey)
+    public let webMaster: String?
+    static let _webMaster = NamedParameter(apiDescription: "Email address for person responsible for technical issues relating to channel.",
+                                           key: "webMaster",
+                                           parameter: String.parameter).optional
+    
+    /// The publication date for the content in the channel.
+    ///
+    /// Example: Sat, 07 Sep 2002 0:00:01 GMT
+    public let publicationDate: Date?
+    static let _publicationDate = NamedParameter(apiDescription: "The publication date for the content in the channel.",
+                                                 key: "pubDate",
+                                                 parameter: Date.parameter).optional
+    
+    /// The last time the content of the channel changed.
+    ///
+    /// Example: Sat, 07 Sep 2002 9:42:31 GMT
+    public let lastBuildDate: Date?
+    static let _lastBuildDate = NamedParameter(apiDescription: "The last time the content of the channel changed.",
+                                                 key: "lastBuildDate",
+                                                 parameter: Date.parameter).optional
+    
+    /// Specify one or more categories that the channel belongs to.
+    ///
+    /// Example: <category>Newspapers</category>
+    public let categories: [Category]?
+    static let _categories = NamedParameter(apiDescription: "Specify one or more categories that the channel belongs to.",
+                                          key: "category",
+                                          parameter: Array.parameterOf(Category.parameter)).optional
+    
+    /// A string indicating the program used to generate the channel.
+    ///
+    /// Example: MightyInHouse Content System v2.3
+    public let generator: String?
+    static let _generator = NamedParameter(apiDescription: "A string indicating the program used to generate the channel.",
+                                           key: "generator",
+                                           parameter: String.parameter).optional
+    
+    /// A URL that points to the documentation for the format used in the RSS
+    /// file.
+    ///
+    /// Example: http://backend.userland.com/rss
+    public let docs: URL?
+    
+    /// Allows processes to register with a cloud to be notified of updates to the
+    /// channel, implementing a lightweight publish-subscribe protocol for RSS feeds.
+    ///
+    /// Example: <cloud domain="rpc.sys.com" port="80" path="/RPC2" registerProcedure="pingMe" protocol="soap"/>
+    public let cloud: Cloud?
+    
+    /// ttl stands for time to live. It's a number of minutes that indicates how long
+    /// a channel can be cached before refreshing from the source.
+    ///
+    /// Example: <ttl>60</ttl>
+    public let timeToLive: Int?
+    
+    /// Specifies a GIF, JPEG or PNG image that can be displayed with the channel.
+    public let image: Image?
+    
+    /// Specifies a text input box that can be displayed with the channel.
+    public let textInput: TextInput?
+    
+    /// A hint for aggregators telling them which hours they can skip.
+    public let skipHours: [Int]?
+    
+    /// A hint for aggregators telling them which days they can skip.
+    public let skipDays: [Int]?
+    
+    /// An item may represent a "story" -- much like a story in a newspaper or
+    /// magazine; if so its description is a synopsis of the story, and the link
+    /// points to the full story.
+    public let items: [Item]?
     
 }
