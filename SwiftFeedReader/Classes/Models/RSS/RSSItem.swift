@@ -12,3 +12,13 @@ public extension RSSChannel {
     }
     
 }
+
+extension RSSChannel.Item {
+    
+    static var parameter: Parameter<RSSChannel.Item> {
+        return Parameter(apiDescription: "item") { _ in
+            throw SwiftFeedReaderError.cannotParse("item - need to implement")
+        }
+    }
+    
+}

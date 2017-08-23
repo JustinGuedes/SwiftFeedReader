@@ -27,3 +27,13 @@ public extension RSSChannel {
     }
     
 }
+
+extension RSSChannel.TextInput {
+    
+    static var parameter: Parameter<RSSChannel.TextInput> {
+        return Parameter(apiDescription: "text input") { _ in
+            throw SwiftFeedReaderError.cannotParse("text input - need to implement")
+        }
+    }
+    
+}

@@ -110,34 +110,61 @@ public struct RSSChannel {
     ///
     /// Example: http://backend.userland.com/rss
     public let docs: URL?
+    static let _docs = NamedParameter(apiDescription: "A URL that points to the documentation for the format used in the RSS file",
+                                      key: "docs",
+                                      parameter: URL.parameter).optional
     
     /// Allows processes to register with a cloud to be notified of updates to the
     /// channel, implementing a lightweight publish-subscribe protocol for RSS feeds.
     ///
     /// Example: <cloud domain="rpc.sys.com" port="80" path="/RPC2" registerProcedure="pingMe" protocol="soap"/>
     public let cloud: Cloud?
+    static let _cloud = NamedParameter(apiDescription: "Allows processes to register with a cloud to be notified of updates to the channel, implementing a lightweight publish-subscribe protocol for RSS feeds.",
+                                       key: "cloud",
+                                       parameter: Cloud.parameter).optional
     
     /// ttl stands for time to live. It's a number of minutes that indicates how long
     /// a channel can be cached before refreshing from the source.
     ///
     /// Example: <ttl>60</ttl>
     public let timeToLive: Int?
+    static let _timeToLive = NamedParameter(apiDescription: "It's a number of minutes that indicates how long a channel can be cached before refreshing from the source.",
+                                            key: "ttl",
+                                            parameter: Int.parameter).optional
     
     /// Specifies a GIF, JPEG or PNG image that can be displayed with the channel.
     public let image: Image?
+    static let _image = NamedParameter(apiDescription: "Specifies a GIF, JPEG or PNG image that can be displayed with the channel.",
+                                       key: "image",
+                                       parameter: Image.parameter).optional
     
     /// Specifies a text input box that can be displayed with the channel.
     public let textInput: TextInput?
+    static let _textInput = NamedParameter(apiDescription: "Specifies a text input box that can be displayed with the channel.",
+                                           key: "textInput",
+                                           parameter: TextInput.parameter).optional
     
     /// A hint for aggregators telling them which hours they can skip.
     public let skipHours: [Int]?
+    static let _skipHours = NamedParameter(apiDescription: "A hint for aggregators telling them which hours they can skip.",
+                                           key: "skipHours",
+                                           parameter: Array.parameterOf(Int.parameter)).optional
     
     /// A hint for aggregators telling them which days they can skip.
     public let skipDays: [Int]?
+    static let _skipDays = NamedParameter(apiDescription: "A hint for aggregators telling them which days they can skip.",
+                                           key: "skipDays",
+                                           parameter: Array.parameterOf(Int.parameter)).optional
     
     /// An item may represent a "story" -- much like a story in a newspaper or
     /// magazine; if so its description is a synopsis of the story, and the link
     /// points to the full story.
     public let items: [Item]?
+    static let _items = NamedParameter(apiDescription: "An item may represent a \"story\"",
+                                       key: "item",
+                                       parameter: Array.parameterOf(Item.parameter)).optional
+    
+    /// Curried version of the intialiser.
+    static let makeRSSChannel = curry(RSSChannel.init)
     
 }

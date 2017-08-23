@@ -13,8 +13,15 @@
 		607FACDB1AFB9204008FA782 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 607FACD91AFB9204008FA782 /* Main.storyboard */; };
 		607FACDD1AFB9204008FA782 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDC1AFB9204008FA782 /* Images.xcassets */; };
 		607FACE01AFB9204008FA782 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDE1AFB9204008FA782 /* LaunchScreen.xib */; };
-		607FACEC1AFB9204008FA782 /* Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACEB1AFB9204008FA782 /* Tests.swift */; };
 		790178012DB54ED671E19596 /* Pods_SwiftFeedReader_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D526F2EDD879974B5E90489D /* Pods_SwiftFeedReader_Example.framework */; };
+		8C2168131F4DD91D00AB31BB /* StringTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C2168121F4DD91D00AB31BB /* StringTests.swift */; };
+		8C2168151F4DDCE000AB31BB /* IntTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C2168141F4DDCE000AB31BB /* IntTests.swift */; };
+		8C2168181F4DDE7A00AB31BB /* XCTestCaseParameter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C2168171F4DDE7A00AB31BB /* XCTestCaseParameter.swift */; };
+		8C21681A1F4DE17900AB31BB /* URLTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C2168191F4DE17900AB31BB /* URLTests.swift */; };
+		8C21681D1F4DE2B200AB31BB /* DateTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C21681C1F4DE2B200AB31BB /* DateTests.swift */; };
+		8C21681F1F4DEABC00AB31BB /* ArrayTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C21681E1F4DEABC00AB31BB /* ArrayTests.swift */; };
+		8C9CF96D1F4DD1E7001EA366 /* RSSCloudTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C9CF96C1F4DD1E7001EA366 /* RSSCloudTests.swift */; };
+		8C9CF9701F4DD4DD001EA366 /* XCTestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C9CF96F1F4DD4DD001EA366 /* XCTestCase.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -28,11 +35,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		34DA45447F8773267DA0476A /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; name = README.md; path = ../README.md; sourceTree = "<group>"; };
+		34DA45447F8773267DA0476A /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 		3D0A866B264E5D325CD919EA /* Pods-SwiftFeedReader_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftFeedReader_Example.release.xcconfig"; path = "Pods/Target Support Files/Pods-SwiftFeedReader_Example/Pods-SwiftFeedReader_Example.release.xcconfig"; sourceTree = "<group>"; };
-		4035E1264D6E572CDCEFAA2C /* SwiftFeedReader.podspec */ = {isa = PBXFileReference; includeInIndex = 1; name = SwiftFeedReader.podspec; path = ../SwiftFeedReader.podspec; sourceTree = "<group>"; };
+		4035E1264D6E572CDCEFAA2C /* SwiftFeedReader.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = SwiftFeedReader.podspec; path = ../SwiftFeedReader.podspec; sourceTree = "<group>"; };
 		4BF6254AA1788CF90597F0C4 /* Pods_SwiftFeedReader_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SwiftFeedReader_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		52120A6E2BD116E269F52C1F /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
+		52120A6E2BD116E269F52C1F /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 		607FACD01AFB9204008FA782 /* SwiftFeedReader_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftFeedReader_Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		607FACD41AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		607FACD51AFB9204008FA782 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -42,8 +49,15 @@
 		607FACDF1AFB9204008FA782 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		607FACE51AFB9204008FA782 /* SwiftFeedReader_Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SwiftFeedReader_Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		607FACEA1AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		607FACEB1AFB9204008FA782 /* Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests.swift; sourceTree = "<group>"; };
 		86C353EEC3F7DD218AF8FF9E /* Pods-SwiftFeedReader_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftFeedReader_Example.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SwiftFeedReader_Example/Pods-SwiftFeedReader_Example.debug.xcconfig"; sourceTree = "<group>"; };
+		8C2168121F4DD91D00AB31BB /* StringTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringTests.swift; sourceTree = "<group>"; };
+		8C2168141F4DDCE000AB31BB /* IntTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntTests.swift; sourceTree = "<group>"; };
+		8C2168171F4DDE7A00AB31BB /* XCTestCaseParameter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XCTestCaseParameter.swift; sourceTree = "<group>"; };
+		8C2168191F4DE17900AB31BB /* URLTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLTests.swift; sourceTree = "<group>"; };
+		8C21681C1F4DE2B200AB31BB /* DateTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateTests.swift; sourceTree = "<group>"; };
+		8C21681E1F4DEABC00AB31BB /* ArrayTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArrayTests.swift; sourceTree = "<group>"; };
+		8C9CF96C1F4DD1E7001EA366 /* RSSCloudTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RSSCloudTests.swift; sourceTree = "<group>"; };
+		8C9CF96F1F4DD4DD001EA366 /* XCTestCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XCTestCase.swift; sourceTree = "<group>"; };
 		8DB975781E7DC39CD4D32579 /* Pods-SwiftFeedReader_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftFeedReader_Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SwiftFeedReader_Tests/Pods-SwiftFeedReader_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		D526F2EDD879974B5E90489D /* Pods_SwiftFeedReader_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SwiftFeedReader_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EACE9C603904936903FDE409 /* Pods-SwiftFeedReader_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftFeedReader_Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-SwiftFeedReader_Tests/Pods-SwiftFeedReader_Tests.release.xcconfig"; sourceTree = "<group>"; };
@@ -115,7 +129,10 @@
 		607FACE81AFB9204008FA782 /* Tests */ = {
 			isa = PBXGroup;
 			children = (
-				607FACEB1AFB9204008FA782 /* Tests.swift */,
+				8C2168201F4DECD500AB31BB /* ComplexParameters */,
+				8C21681B1F4DE18900AB31BB /* BasicParameters */,
+				8C2168161F4DDE6400AB31BB /* Helpers */,
+				8C9CF96E1F4DD4BD001EA366 /* Extensions */,
 				607FACE91AFB9204008FA782 /* Supporting Files */,
 			);
 			path = Tests;
@@ -148,6 +165,50 @@
 				EACE9C603904936903FDE409 /* Pods-SwiftFeedReader_Tests.release.xcconfig */,
 			);
 			name = Pods;
+			sourceTree = "<group>";
+		};
+		8C2168161F4DDE6400AB31BB /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				8C2168171F4DDE7A00AB31BB /* XCTestCaseParameter.swift */,
+			);
+			name = Helpers;
+			sourceTree = "<group>";
+		};
+		8C21681B1F4DE18900AB31BB /* BasicParameters */ = {
+			isa = PBXGroup;
+			children = (
+				8C2168121F4DD91D00AB31BB /* StringTests.swift */,
+				8C2168141F4DDCE000AB31BB /* IntTests.swift */,
+				8C2168191F4DE17900AB31BB /* URLTests.swift */,
+				8C21681C1F4DE2B200AB31BB /* DateTests.swift */,
+				8C21681E1F4DEABC00AB31BB /* ArrayTests.swift */,
+			);
+			name = BasicParameters;
+			sourceTree = "<group>";
+		};
+		8C2168201F4DECD500AB31BB /* ComplexParameters */ = {
+			isa = PBXGroup;
+			children = (
+				8C2168211F4DECE100AB31BB /* RSS */,
+			);
+			name = ComplexParameters;
+			sourceTree = "<group>";
+		};
+		8C2168211F4DECE100AB31BB /* RSS */ = {
+			isa = PBXGroup;
+			children = (
+				8C9CF96C1F4DD1E7001EA366 /* RSSCloudTests.swift */,
+			);
+			name = RSS;
+			sourceTree = "<group>";
+		};
+		8C9CF96E1F4DD4BD001EA366 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				8C9CF96F1F4DD4DD001EA366 /* XCTestCase.swift */,
+			);
+			name = Extensions;
 			sourceTree = "<group>";
 		};
 		A65540FF4957205421D74493 /* Frameworks */ = {
@@ -370,7 +431,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				607FACEC1AFB9204008FA782 /* Tests.swift in Sources */,
+				8C9CF9701F4DD4DD001EA366 /* XCTestCase.swift in Sources */,
+				8C21681A1F4DE17900AB31BB /* URLTests.swift in Sources */,
+				8C2168181F4DDE7A00AB31BB /* XCTestCaseParameter.swift in Sources */,
+				8C21681D1F4DE2B200AB31BB /* DateTests.swift in Sources */,
+				8C2168131F4DD91D00AB31BB /* StringTests.swift in Sources */,
+				8C21681F1F4DEABC00AB31BB /* ArrayTests.swift in Sources */,
+				8C9CF96D1F4DD1E7001EA366 /* RSSCloudTests.swift in Sources */,
+				8C2168151F4DDCE000AB31BB /* IntTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -536,6 +604,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SwiftFeedReader_Example.app/SwiftFeedReader_Example";
 			};
 			name = Debug;
 		};
@@ -552,6 +621,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SwiftFeedReader_Example.app/SwiftFeedReader_Example";
 			};
 			name = Release;
 		};

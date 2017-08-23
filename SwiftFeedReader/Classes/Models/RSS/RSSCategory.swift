@@ -5,10 +5,10 @@
 //  Created by Justin Guedes on 2017/08/22.
 //
 
-extension RSSChannel {
+public extension RSSChannel {
     
     /// Category that the channel belongs to.
-    public struct Category {
+    struct Category {
         
         /// Name of category.
         ///
@@ -20,12 +20,16 @@ extension RSSChannel {
         /// Example: http://www.fool.com/cusips
         public let domain: String?
         
-        static var parameter: Parameter<Category> {
-            return Parameter(apiDescription: "category") { _ in
-                throw SwiftFeedReaderError.cannotParse("category - need to implement")
-            }
+    }
+    
+}
+
+extension RSSChannel.Category {
+    
+    static var parameter: Parameter<RSSChannel.Category> {
+        return Parameter(apiDescription: "category") { _ in
+            throw SwiftFeedReaderError.cannotParse("category - need to implement")
         }
-        
     }
     
 }

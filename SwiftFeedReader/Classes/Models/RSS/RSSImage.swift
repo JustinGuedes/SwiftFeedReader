@@ -30,3 +30,13 @@ public extension RSSChannel {
     }
     
 }
+
+extension RSSChannel.Image {
+    
+    static var parameter: Parameter<RSSChannel.Image> {
+        return Parameter(apiDescription: "image") { _ in
+            throw SwiftFeedReaderError.cannotParse("image - need to implement")
+        }
+    }
+    
+}
