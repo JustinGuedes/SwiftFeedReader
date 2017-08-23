@@ -5,6 +5,26 @@
 //  Created by Justin Guedes on 2017/08/23.
 //
 
+func curry<A, B, C>(_ method: @escaping (A, B) -> C) -> (A) -> (B) -> C {
+    return { a in
+        return { b in
+            return method(a, b)
+        }
+    }
+}
+
+func curry<A, B, C, D, E>(_ method: @escaping (A, B, C, D) -> E) -> (A) -> (B) -> (C) -> (D) -> E {
+    return { a in
+        return { b in
+            return { c in
+                return { d in
+                    return method(a, b, c, d)
+                }
+            }
+        }
+    }
+}
+
 func curry<A, B, C, D, E, F>(_ method: @escaping (A, B, C, D, E) -> F) -> (A) -> (B) -> (C) -> (D) -> (E) -> F {
     return { a in
         return { b in

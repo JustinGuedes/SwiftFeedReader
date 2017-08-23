@@ -16,7 +16,7 @@ extension XCTestCase {
             let result = try parameter.parse(value)
             XCTAssertEqual(expectedValue, result)
         } catch {
-            XCTFail("error thrown when expecting parameter value")
+            XCTFail("error thrown when expecting parameter value [error: \(error)]")
         }
     }
     
@@ -25,7 +25,7 @@ extension XCTestCase {
             let result = try parameter.parse(value)
             XCTAssertEqual(expectedValue, result)
         } catch {
-            XCTFail("error thrown when expecting parameter value")
+            XCTFail("error thrown when expecting parameter value [error: \(error)]")
         }
     }
     
@@ -36,7 +36,7 @@ extension XCTestCase {
         } catch SwiftFeedReaderError.cannotParse(_) {
             // DO NOTHING
         } catch {
-            XCTFail("other error thrown")
+            XCTFail("other error thrown [error: \(error)]")
         }
     }
     
@@ -47,7 +47,7 @@ extension XCTestCase {
         } catch SwiftFeedReaderError.parameterNotFound(_) {
             // DO NOTHING
         } catch {
-            XCTFail("other error thrown")
+            XCTFail("other error thrown [error: \(error)]")
         }
     }
     
@@ -58,7 +58,7 @@ extension XCTestCase {
         } catch let SwiftFeedReaderError.parameterNotFound(message) {
             XCTAssertTrue(message.contains(key))
         } catch {
-            XCTFail("other error thrown")
+            XCTFail("other error thrown [error: \(error)]")
         }
     }
     

@@ -14,44 +14,44 @@ public extension RSSChannel {
         ///
         /// Example: radio.xmlstoragesystem.com
         public let domain: String
-        static let _domain = NamedParameter(apiDescription: "Domain of the web service.",
-                                            key: "domain",
-                                            parameter: String.parameter)
+        fileprivate static let _domain = NamedParameter(apiDescription: "Domain of the web service.",
+                                                        key: "domain",
+                                                        parameter: String.parameter)
         
         /// Port of the web service.
         ///
         /// Example: 80
         public let port: Int
-        static let _port = NamedParameter(apiDescription: "Port of the web service.",
-                                          key: "port",
-                                          parameter: Int.parameter)
+        fileprivate static let _port = NamedParameter(apiDescription: "Port of the web service.",
+                                                      key: "port",
+                                                      parameter: Int.parameter)
         
         /// Path for the webservice.
         ///
         /// Example: /RPC2
         public let path: String
-        static let _path = NamedParameter(apiDescription: "Path for the webservice.",
-                                          key: "path",
-                                          parameter: String.parameter)
+        fileprivate static let _path = NamedParameter(apiDescription: "Path for the webservice.",
+                                                      key: "path",
+                                                      parameter: String.parameter)
         
         /// The procedure to call.
         ///
         /// Example: xmlStorageSystem.rssPleaseNotify
         public let registerProcedure: String
-        static let _registerProcedure = NamedParameter(apiDescription: "The procedure to call.",
-                                                       key: "registerProcedure",
-                                                       parameter: String.parameter)
+        fileprivate static let _registerProcedure = NamedParameter(apiDescription: "The procedure to call.",
+                                                                   key: "registerProcedure",
+                                                                   parameter: String.parameter)
         
         /// The protocol used for web service.
         ///
         /// Example: xml-rpc
         public let `protocol`: String
-        static let _protocol = NamedParameter(apiDescription: "The protocol used for web service.",
-                                              key: "protocol",
-                                              parameter: String.parameter)
+        fileprivate static let _protocol = NamedParameter(apiDescription: "The protocol used for web service.",
+                                                          key: "protocol",
+                                                          parameter: String.parameter)
         
         /// Curried version of the initialiser.
-        static let makeCloud = curry(Cloud.init)
+        fileprivate static let makeCloud = curry(Cloud.init)
         
     }
     
