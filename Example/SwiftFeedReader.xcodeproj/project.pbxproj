@@ -25,6 +25,8 @@
 		8C9630A11F4F03E3008C9505 /* RSSSourceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C9630A01F4F03E3008C9505 /* RSSSourceTests.swift */; };
 		8C9630A31F4F080C008C9505 /* RSSItemTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C9630A21F4F080C008C9505 /* RSSItemTests.swift */; };
 		8C9630A51F4F1DEF008C9505 /* RSSChannelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C9630A41F4F1DEF008C9505 /* RSSChannelTests.swift */; };
+		8C9630AC1F4F24C6008C9505 /* XmlParserTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C9630AB1F4F24C6008C9505 /* XmlParserTests.swift */; };
+		8C9630B21F4F4441008C9505 /* XmlNodeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C9630B11F4F4441008C9505 /* XmlNodeTests.swift */; };
 		8C9CF96D1F4DD1E7001EA366 /* RSSCloudTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C9CF96C1F4DD1E7001EA366 /* RSSCloudTests.swift */; };
 		8C9CF9701F4DD4DD001EA366 /* XCTestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C9CF96F1F4DD4DD001EA366 /* XCTestCase.swift */; };
 		8C9F255A1F4ECD8F002BA284 /* RSSImageTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C9F25591F4ECD8F002BA284 /* RSSImageTests.swift */; };
@@ -70,6 +72,8 @@
 		8C9630A01F4F03E3008C9505 /* RSSSourceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RSSSourceTests.swift; sourceTree = "<group>"; };
 		8C9630A21F4F080C008C9505 /* RSSItemTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RSSItemTests.swift; sourceTree = "<group>"; };
 		8C9630A41F4F1DEF008C9505 /* RSSChannelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RSSChannelTests.swift; sourceTree = "<group>"; };
+		8C9630AB1F4F24C6008C9505 /* XmlParserTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XmlParserTests.swift; sourceTree = "<group>"; };
+		8C9630B11F4F4441008C9505 /* XmlNodeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XmlNodeTests.swift; sourceTree = "<group>"; };
 		8C9CF96C1F4DD1E7001EA366 /* RSSCloudTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RSSCloudTests.swift; sourceTree = "<group>"; };
 		8C9CF96F1F4DD4DD001EA366 /* XCTestCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XCTestCase.swift; sourceTree = "<group>"; };
 		8C9F25591F4ECD8F002BA284 /* RSSImageTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RSSImageTests.swift; sourceTree = "<group>"; };
@@ -147,6 +151,7 @@
 		607FACE81AFB9204008FA782 /* Tests */ = {
 			isa = PBXGroup;
 			children = (
+				8C9630AA1F4F24A6008C9505 /* Parsers */,
 				8C2168201F4DECD500AB31BB /* ComplexParameters */,
 				8C21681B1F4DE18900AB31BB /* BasicParameters */,
 				8C2168161F4DDE6400AB31BB /* Helpers */,
@@ -228,6 +233,15 @@
 				8C9630A41F4F1DEF008C9505 /* RSSChannelTests.swift */,
 			);
 			name = RSS;
+			sourceTree = "<group>";
+		};
+		8C9630AA1F4F24A6008C9505 /* Parsers */ = {
+			isa = PBXGroup;
+			children = (
+				8C9630AB1F4F24C6008C9505 /* XmlParserTests.swift */,
+				8C9630B11F4F4441008C9505 /* XmlNodeTests.swift */,
+			);
+			name = Parsers;
 			sourceTree = "<group>";
 		};
 		8C9CF96E1F4DD4BD001EA366 /* Extensions */ = {
@@ -467,7 +481,9 @@
 				8C9F25601F4EE97D002BA284 /* RSSEnclosureTests.swift in Sources */,
 				8C21681F1F4DEABC00AB31BB /* ArrayTests.swift in Sources */,
 				8C9630A31F4F080C008C9505 /* RSSItemTests.swift in Sources */,
+				8C9630B21F4F4441008C9505 /* XmlNodeTests.swift in Sources */,
 				8C9F255A1F4ECD8F002BA284 /* RSSImageTests.swift in Sources */,
+				8C9630AC1F4F24C6008C9505 /* XmlParserTests.swift in Sources */,
 				8C9CF96D1F4DD1E7001EA366 /* RSSCloudTests.swift in Sources */,
 				8C9F25681F4F00D8002BA284 /* RSSGUIDTests.swift in Sources */,
 				8C9F25661F4EF165002BA284 /* BoolTests.swift in Sources */,

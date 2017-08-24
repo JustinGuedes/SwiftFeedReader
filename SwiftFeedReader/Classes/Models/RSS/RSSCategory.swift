@@ -1,6 +1,6 @@
 //
 //  RSSCategory.swift
-//  Pods-SwiftFeedReader_Example
+//  SwiftFeedReader
 //
 //  Created by Justin Guedes on 2017/08/22.
 //

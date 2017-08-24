@@ -17,14 +17,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
-        let m = Main()
-        m.test([:])
-        m.test(["id": "Justin"])
-        m.test(["id": -1])
-        m.test(["id": 1])
-        m.test(["id": 1, "email": "justin.guedes@gmail.com"])
-        m.test(["id": 1, "address": "18 Middelvlei Street, Hurlingham", "email": "justin.guedes@gmail.com"])
-        
         return true
     }
 
