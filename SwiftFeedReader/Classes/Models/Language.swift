@@ -104,8 +104,12 @@ public enum Language: String {
     case Turkish = "tr"
     case Ukranian = "uk"
     
+}
+
+extension Language {
+    
     static var parameter: Parameter<Language> {
-        return Parameter(apiDescription: "language") { 
+        return Parameter(apiDescription: "language") {
             guard let languageStr = $0 as? String,
                 let language = Language(rawValue: languageStr) else {
                     throw SwiftFeedReaderError.cannotParse("language")

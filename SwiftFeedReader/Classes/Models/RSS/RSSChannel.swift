@@ -168,3 +168,63 @@ public struct RSSChannel {
     fileprivate static let makeRSSChannel = curry(RSSChannel.init)
     
 }
+
+extension RSSChannel: Equatable {
+    
+    public static func ==(lhs: RSSChannel, rhs: RSSChannel) -> Bool {
+        return lhs.title == rhs.title &&
+        lhs.link == rhs.link &&
+        lhs.description == rhs.description &&
+        lhs.language == rhs.language &&
+        lhs.copyright == rhs.copyright &&
+        lhs.managingEditor == rhs.managingEditor &&
+        lhs.webMaster == rhs.webMaster &&
+        lhs.publicationDate == rhs.publicationDate &&
+        lhs.lastBuildDate == rhs.lastBuildDate &&
+        (lhs.categories ?? []) == (rhs.categories ?? []) &&
+        lhs.generator == rhs.generator &&
+        lhs.docs == rhs.docs &&
+        lhs.cloud == rhs.cloud &&
+        lhs.timeToLive == rhs.timeToLive &&
+        lhs.image == rhs.image &&
+        lhs.textInput == rhs.textInput &&
+        (lhs.skipHours ?? []) == (rhs.skipHours ?? []) &&
+        (lhs.skipDays ?? []) == (rhs.skipDays ?? []) &&
+        (lhs.items ?? []) == (rhs.items ?? [])
+    }
+    
+}
+
+extension RSSChannel {
+    
+    static var parameter: Parameter<RSSChannel> {
+        return Parameter(apiDescription: "channel") {
+            let dictParser = DictionaryParser(pure: makeRSSChannel)
+                <*> _title
+                <*> _link
+                <*> _description
+                <*> _language
+                <*> _copyright
+                <*> _managingEditor
+                <*> _webMaster
+                <*> _publicationDate
+                <*> _lastBuildDate
+                <*> _categories
+                <*> _generator
+                <*> _docs
+                <*> _cloud
+                <*> _timeToLive
+                <*> _image
+                <*> _textInput
+                <*> _skipHours
+                <*> _skipDays
+                <*> _items
+            guard let dictionary = $0 as? [String: Any] else {
+                throw SwiftFeedReaderError.cannotParse("channel - not correct format")
+            }
+            
+            return try dictParser.parse(dictionary)
+        }
+    }
+    
+}

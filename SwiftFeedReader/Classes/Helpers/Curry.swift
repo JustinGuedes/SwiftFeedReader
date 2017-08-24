@@ -13,6 +13,16 @@ func curry<A, B, C>(_ method: @escaping (A, B) -> C) -> (A) -> (B) -> C {
     }
 }
 
+func curry<A, B, C, D>(_ method: @escaping (A, B, C) -> D) -> (A) -> (B) -> (C) -> D {
+    return { a in
+        return { b in
+            return { c in
+                return method(a, b, c)
+            }
+        }
+    }
+}
+
 func curry<A, B, C, D, E>(_ method: @escaping (A, B, C, D) -> E) -> (A) -> (B) -> (C) -> (D) -> E {
     return { a in
         return { b in
@@ -32,6 +42,30 @@ func curry<A, B, C, D, E, F>(_ method: @escaping (A, B, C, D, E) -> F) -> (A) ->
                 return { d in
                     return { e in
                         return method(a, b, c, d, e)
+                    }
+                }
+            }
+        }
+    }
+}
+
+func curry<A, B, C, D, E, F, G, H, I, J, K>(_ method: @escaping (A, B, C, D, E, F, G, H, I, J) -> K) -> (A) -> (B) -> (C) -> (D) -> (E) -> (F) -> (G) -> (H) -> (I) -> (J) -> K {
+    return { a in
+        return { b in
+            return { c in
+                return { d in
+                    return { e in
+                        return { f in
+                            return { g in
+                                return { h in
+                                    return { i in
+                                        return { j in
+                                            return method(a, b, c, d, e, f, g, h, i, j)
+                                        }
+                                    }
+                                }
+                            }
+                        }
                     }
                 }
             }

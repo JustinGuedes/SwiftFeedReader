@@ -22,8 +22,15 @@
 		8C21681F1F4DEABC00AB31BB /* ArrayTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C21681E1F4DEABC00AB31BB /* ArrayTests.swift */; };
 		8C2168231F4DF19C00AB31BB /* RSSCategoryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C2168221F4DF19C00AB31BB /* RSSCategoryTests.swift */; };
 		8C2168251F4DF5C000AB31BB /* RSSTextInputTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C2168241F4DF5C000AB31BB /* RSSTextInputTests.swift */; };
+		8C9630A11F4F03E3008C9505 /* RSSSourceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C9630A01F4F03E3008C9505 /* RSSSourceTests.swift */; };
+		8C9630A31F4F080C008C9505 /* RSSItemTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C9630A21F4F080C008C9505 /* RSSItemTests.swift */; };
+		8C9630A51F4F1DEF008C9505 /* RSSChannelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C9630A41F4F1DEF008C9505 /* RSSChannelTests.swift */; };
 		8C9CF96D1F4DD1E7001EA366 /* RSSCloudTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C9CF96C1F4DD1E7001EA366 /* RSSCloudTests.swift */; };
 		8C9CF9701F4DD4DD001EA366 /* XCTestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C9CF96F1F4DD4DD001EA366 /* XCTestCase.swift */; };
+		8C9F255A1F4ECD8F002BA284 /* RSSImageTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C9F25591F4ECD8F002BA284 /* RSSImageTests.swift */; };
+		8C9F25601F4EE97D002BA284 /* RSSEnclosureTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C9F255F1F4EE97D002BA284 /* RSSEnclosureTests.swift */; };
+		8C9F25661F4EF165002BA284 /* BoolTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C9F25651F4EF165002BA284 /* BoolTests.swift */; };
+		8C9F25681F4F00D8002BA284 /* RSSGUIDTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C9F25671F4F00D8002BA284 /* RSSGUIDTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -60,8 +67,15 @@
 		8C21681E1F4DEABC00AB31BB /* ArrayTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArrayTests.swift; sourceTree = "<group>"; };
 		8C2168221F4DF19C00AB31BB /* RSSCategoryTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RSSCategoryTests.swift; sourceTree = "<group>"; };
 		8C2168241F4DF5C000AB31BB /* RSSTextInputTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RSSTextInputTests.swift; sourceTree = "<group>"; };
+		8C9630A01F4F03E3008C9505 /* RSSSourceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RSSSourceTests.swift; sourceTree = "<group>"; };
+		8C9630A21F4F080C008C9505 /* RSSItemTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RSSItemTests.swift; sourceTree = "<group>"; };
+		8C9630A41F4F1DEF008C9505 /* RSSChannelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RSSChannelTests.swift; sourceTree = "<group>"; };
 		8C9CF96C1F4DD1E7001EA366 /* RSSCloudTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RSSCloudTests.swift; sourceTree = "<group>"; };
 		8C9CF96F1F4DD4DD001EA366 /* XCTestCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XCTestCase.swift; sourceTree = "<group>"; };
+		8C9F25591F4ECD8F002BA284 /* RSSImageTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RSSImageTests.swift; sourceTree = "<group>"; };
+		8C9F255F1F4EE97D002BA284 /* RSSEnclosureTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RSSEnclosureTests.swift; sourceTree = "<group>"; };
+		8C9F25651F4EF165002BA284 /* BoolTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoolTests.swift; sourceTree = "<group>"; };
+		8C9F25671F4F00D8002BA284 /* RSSGUIDTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RSSGUIDTests.swift; sourceTree = "<group>"; };
 		8DB975781E7DC39CD4D32579 /* Pods-SwiftFeedReader_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftFeedReader_Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SwiftFeedReader_Tests/Pods-SwiftFeedReader_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		D526F2EDD879974B5E90489D /* Pods_SwiftFeedReader_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SwiftFeedReader_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EACE9C603904936903FDE409 /* Pods-SwiftFeedReader_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftFeedReader_Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-SwiftFeedReader_Tests/Pods-SwiftFeedReader_Tests.release.xcconfig"; sourceTree = "<group>"; };
@@ -187,6 +201,7 @@
 				8C2168191F4DE17900AB31BB /* URLTests.swift */,
 				8C21681C1F4DE2B200AB31BB /* DateTests.swift */,
 				8C21681E1F4DEABC00AB31BB /* ArrayTests.swift */,
+				8C9F25651F4EF165002BA284 /* BoolTests.swift */,
 			);
 			name = BasicParameters;
 			sourceTree = "<group>";
@@ -205,6 +220,12 @@
 				8C9CF96C1F4DD1E7001EA366 /* RSSCloudTests.swift */,
 				8C2168221F4DF19C00AB31BB /* RSSCategoryTests.swift */,
 				8C2168241F4DF5C000AB31BB /* RSSTextInputTests.swift */,
+				8C9F25591F4ECD8F002BA284 /* RSSImageTests.swift */,
+				8C9F255F1F4EE97D002BA284 /* RSSEnclosureTests.swift */,
+				8C9F25671F4F00D8002BA284 /* RSSGUIDTests.swift */,
+				8C9630A01F4F03E3008C9505 /* RSSSourceTests.swift */,
+				8C9630A21F4F080C008C9505 /* RSSItemTests.swift */,
+				8C9630A41F4F1DEF008C9505 /* RSSChannelTests.swift */,
 			);
 			name = RSS;
 			sourceTree = "<group>";
@@ -441,10 +462,17 @@
 				8C21681A1F4DE17900AB31BB /* URLTests.swift in Sources */,
 				8C2168181F4DDE7A00AB31BB /* XCTestCaseParameter.swift in Sources */,
 				8C21681D1F4DE2B200AB31BB /* DateTests.swift in Sources */,
+				8C9630A51F4F1DEF008C9505 /* RSSChannelTests.swift in Sources */,
 				8C2168131F4DD91D00AB31BB /* StringTests.swift in Sources */,
+				8C9F25601F4EE97D002BA284 /* RSSEnclosureTests.swift in Sources */,
 				8C21681F1F4DEABC00AB31BB /* ArrayTests.swift in Sources */,
+				8C9630A31F4F080C008C9505 /* RSSItemTests.swift in Sources */,
+				8C9F255A1F4ECD8F002BA284 /* RSSImageTests.swift in Sources */,
 				8C9CF96D1F4DD1E7001EA366 /* RSSCloudTests.swift in Sources */,
+				8C9F25681F4F00D8002BA284 /* RSSGUIDTests.swift in Sources */,
+				8C9F25661F4EF165002BA284 /* BoolTests.swift in Sources */,
 				8C2168151F4DDCE000AB31BB /* IntTests.swift in Sources */,
+				8C9630A11F4F03E3008C9505 /* RSSSourceTests.swift in Sources */,
 				8C2168251F4DF5C000AB31BB /* RSSTextInputTests.swift in Sources */,
 				8C2168231F4DF19C00AB31BB /* RSSCategoryTests.swift in Sources */,
 			);

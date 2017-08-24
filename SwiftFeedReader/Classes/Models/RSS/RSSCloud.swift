@@ -73,7 +73,12 @@ extension RSSChannel.Cloud {
     
     static var parameter: Parameter<RSSChannel.Cloud> {
         return Parameter(apiDescription: "cloud") {
-            let dictParser = DictionaryParser(pure: makeCloud) <*> _domain <*> _port <*> _path <*> _registerProcedure <*> _protocol
+            let dictParser = DictionaryParser(pure: makeCloud)
+                <*> _domain
+                <*> _port
+                <*> _path
+                <*> _registerProcedure
+                <*> _protocol
             guard let dictionary = $0 as? [String: Any] else {
                 throw SwiftFeedReaderError.cannotParse("cloud - not correct format")
             }

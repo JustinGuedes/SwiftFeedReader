@@ -15,7 +15,7 @@ public extension RSSChannel {
         /// Example: Newspaper
         public let name: String
         fileprivate static let _name = NamedParameter(apiDescription: "Name of the category.",
-                                                      key: "name",
+                                                      key: "category",
                                                       parameter: String.parameter)
         
         /// Domain of the category.
@@ -46,7 +46,9 @@ extension RSSChannel.Category {
     
     static var parameter: Parameter<RSSChannel.Category> {
         return Parameter(apiDescription: "category") {
-            let dictParser = DictionaryParser(pure: makeCategory) <*> _name <*> _domain
+            let dictParser = DictionaryParser(pure: makeCategory)
+                <*> _name
+                <*> _domain
             guard let dictionary = $0 as? [String: Any] else {
                 throw SwiftFeedReaderError.cannotParse("category - not correct format")
             }

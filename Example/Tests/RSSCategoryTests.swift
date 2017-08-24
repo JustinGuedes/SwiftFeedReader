@@ -13,10 +13,10 @@ class RSSCategoryTests: XCTestCase, XCTestCaseParameter {
     
     let parameter = RSSChannel.Category.parameter
     
-    let categoryDictionaryWithDomain: [String: Any] = ["name": "Category Name",
+    let categoryDictionaryWithDomain: [String: Any] = ["category": "Category Name",
                                                        "domain": "Domain"]
     
-    let categoryDictionaryWithoutDomain: [String: Any] = ["name": "Category Name"]
+    let categoryDictionaryWithoutDomain: [String: Any] = ["category": "Category Name"]
     
     func testShouldThrowParameterNotFoundWhenParsingEmptyDictionary() {
         let emptyDict: [String: Any] = [:]
@@ -26,20 +26,20 @@ class RSSCategoryTests: XCTestCase, XCTestCaseParameter {
     
     func testShouldThrowParameterNotFoundWhenParsingDictionaryWithoutName() {
         var dictionaryWithoutName = categoryDictionaryWithDomain
-        dictionaryWithoutName.removeValue(forKey: "name")
+        dictionaryWithoutName.removeValue(forKey: "category")
         
         XCTAssertParameterNotFound(inDictionary: dictionaryWithoutName)
     }
     
     func testShouldParseDictionaryWithDomainIntoCategoryObject() {
-        let expectedCategory = RSSChannel.Category(name: categoryDictionaryWithDomain["name"] as! String,
+        let expectedCategory = RSSChannel.Category(name: categoryDictionaryWithDomain["category"] as! String,
                                                    domain: categoryDictionaryWithDomain["domain"] as? String)
         
         XCTAssertEqualParameter(expectedCategory, withValue: categoryDictionaryWithDomain)
     }
     
     func testShouldParseDictionaryWithoutDomainIntoCategoryObject() {
-        let expectedCategory = RSSChannel.Category(name: categoryDictionaryWithoutDomain["name"] as! String,
+        let expectedCategory = RSSChannel.Category(name: categoryDictionaryWithoutDomain["category"] as! String,
                                                    domain: .none)
         
         XCTAssertEqualParameter(expectedCategory, withValue: categoryDictionaryWithoutDomain)

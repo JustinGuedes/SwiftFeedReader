@@ -58,7 +58,11 @@ extension RSSChannel.TextInput {
     
     static var parameter: Parameter<RSSChannel.TextInput> {
         return Parameter(apiDescription: "text input") {
-            let dictParser = DictionaryParser(pure: makeTextInput) <*> _title <*> _description <*> _name <*> _link
+            let dictParser = DictionaryParser(pure: makeTextInput)
+                <*> _title
+                <*> _description
+                <*> _name
+                <*> _link
             guard let dictionary = $0 as? [String: Any] else {
                 throw SwiftFeedReaderError.cannotParse("text input - not correct format")
             }
