@@ -7,7 +7,9 @@
 
 public struct XmlParser {
     
-    func parse(string: String) -> XmlNodeType {
+    public init () {}
+    
+    public func parse(string: String) -> XmlNode {
         guard let data = string.data(using: .utf8) else {
             fatalError("Must rather throw error")
         }
@@ -15,11 +17,11 @@ public struct XmlParser {
         return parse(withParser: XMLParser(data: data))
     }
     
-    func parse(url: URL) -> XmlNodeType {
+    public func parse(url: URL) -> XmlNode {
         return parse(withParser: XMLParser(contentsOf: url))
     }
     
-    fileprivate func parse(withParser parser: XMLParser?) -> XmlNodeType {
+    fileprivate func parse(withParser parser: XMLParser?) -> XmlNode {
         let delegate = XmlParserDelegate()
         parser?.delegate = delegate
         parser?.parse()
@@ -28,8 +30,14 @@ public struct XmlParser {
     
     class XmlParserDelegate: NSObject, XMLParserDelegate {
         
-        var rootNode: XmlNodeType = XmlNode(name: "root")
-        var nodes: [XmlNodeType] = []
+        var rootNode: XmlNode
+        var nodes: [XmlNode]
+        
+        override init() {
+            self.rootNode = XmlNode(name: "root")
+            self.nodes = []
+            super.init()
+        }
         
         func parserDidStartDocument(_ parser: XMLParser) {
             nodes.append(rootNode)
@@ -38,8 +46,7 @@ public struct XmlParser {
         func parser(_ parser: XMLParser, didStartElement elementName: String, namespaceURI: String?, qualifiedName qName: String?, attributes attributeDict: [String : String] = [:]) {
             let parentNode = nodes.last
             let node = XmlNode(name: elementName,
-                               attributes: attributeDict,
-                               parent: parentNode)
+                               attributes: attributeDict)
             
             parentNode?.appendChild(node)
             nodes.append(node)

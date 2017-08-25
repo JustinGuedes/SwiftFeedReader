@@ -29,8 +29,8 @@ class ArrayTests: XCTestCase {
         XCTAssertEqualParameter(emptyArray, forParameter: Array.parameterOf(String.parameter), withValue: emptyArray)
     }
     
-    func testShouldThrowCannotParseErrorWhenParsingNonArray() {
-        XCTAssertCannotParse(forParameter: Array.parameterOf(String.parameter), withValue: "not array")
+    func testShouldParseArrayWhenParsingSingleElement() {
+        XCTAssertEqualParameter(["not array"], forParameter: Array.parameterOf(String.parameter), withValue: "not array")
     }
     
     func testShouldThrowCannotParseErrorWhenCannotParseAnyElementInArray() {

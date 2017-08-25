@@ -111,7 +111,7 @@ extension Language {
     static var parameter: Parameter<Language> {
         return Parameter(apiDescription: "language") {
             guard let languageStr = $0 as? String,
-                let language = Language(rawValue: languageStr) else {
+                let language = Language(rawValue: languageStr.lowercased()) else {
                     throw SwiftFeedReaderError.cannotParse("language")
             }
             

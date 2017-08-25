@@ -227,4 +227,21 @@ extension RSSChannel {
         }
     }
     
+    static var schema: XmlSchema = ["category": .object,
+                                    "cloud": .object,
+                                    "enclosure": .object,
+                                    "guid": .object,
+                                    "height": .int,
+                                    "image": .object,
+                                    "isPermaLink": .bool,
+                                    "item": .object,
+                                    "length": .int,
+                                    "port": .int,
+                                    "skipDays": .int,
+                                    "skipHours": .int,
+                                    "source": .object,
+                                    "textInput": .object,
+                                    "ttl": .int,
+                                    "width": .int]
+    
 }
