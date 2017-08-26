@@ -20,6 +20,22 @@ it, simply add the following line to your Podfile:
 pod "SwiftFeedReader"
 ```
 
+## How To Use
+
+To get an `RSS` struct, either provide a string of the xml contents or a url pointing to the RSS feed:
+
+```swift
+let url = URL(string: "https://feeds.rss")!
+let rss: RSS
+do {
+  rss = try XmlToRss.getRSS(fromUrl: url)
+} catch {
+  print(error)
+}
+```
+
+And that's it! :)
+
 ## Author
 
 JustinGuedes, justin.guedes@gmail.com
