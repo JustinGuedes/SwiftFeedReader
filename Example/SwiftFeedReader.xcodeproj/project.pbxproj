@@ -22,7 +22,7 @@
 		8C21681F1F4DEABC00AB31BB /* ArrayTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C21681E1F4DEABC00AB31BB /* ArrayTests.swift */; };
 		8C2168231F4DF19C00AB31BB /* RSSCategoryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C2168221F4DF19C00AB31BB /* RSSCategoryTests.swift */; };
 		8C2168251F4DF5C000AB31BB /* RSSTextInputTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C2168241F4DF5C000AB31BB /* RSSTextInputTests.swift */; };
-		8C495F471F50AF3D00EBF21D /* XmlToRSSTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C495F461F50AF3D00EBF21D /* XmlToRSSTests.swift */; };
+		8C495F471F50AF3D00EBF21D /* XmlToRssTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C495F461F50AF3D00EBF21D /* XmlToRssTests.swift */; };
 		8C7C61E21F51678F00A892E2 /* RSSTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C7C61E11F51678F00A892E2 /* RSSTests.swift */; };
 		8C9630A11F4F03E3008C9505 /* RSSSourceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C9630A01F4F03E3008C9505 /* RSSSourceTests.swift */; };
 		8C9630A31F4F080C008C9505 /* RSSItemTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C9630A21F4F080C008C9505 /* RSSItemTests.swift */; };
@@ -71,7 +71,7 @@
 		8C21681E1F4DEABC00AB31BB /* ArrayTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArrayTests.swift; sourceTree = "<group>"; };
 		8C2168221F4DF19C00AB31BB /* RSSCategoryTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RSSCategoryTests.swift; sourceTree = "<group>"; };
 		8C2168241F4DF5C000AB31BB /* RSSTextInputTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RSSTextInputTests.swift; sourceTree = "<group>"; };
-		8C495F461F50AF3D00EBF21D /* XmlToRSSTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XmlToRSSTests.swift; sourceTree = "<group>"; };
+		8C495F461F50AF3D00EBF21D /* XmlToRssTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XmlToRssTests.swift; sourceTree = "<group>"; };
 		8C7C61E11F51678F00A892E2 /* RSSTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RSSTests.swift; sourceTree = "<group>"; };
 		8C9630A01F4F03E3008C9505 /* RSSSourceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RSSSourceTests.swift; sourceTree = "<group>"; };
 		8C9630A21F4F080C008C9505 /* RSSItemTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RSSItemTests.swift; sourceTree = "<group>"; };
@@ -245,7 +245,7 @@
 			children = (
 				8C9630AB1F4F24C6008C9505 /* XmlParserTests.swift */,
 				8C9630B11F4F4441008C9505 /* XmlNodeTests.swift */,
-				8C495F461F50AF3D00EBF21D /* XmlToRSSTests.swift */,
+				8C495F461F50AF3D00EBF21D /* XmlToRssTests.swift */,
 			);
 			name = Parsers;
 			sourceTree = "<group>";
@@ -488,7 +488,7 @@
 				8C9F25601F4EE97D002BA284 /* RSSEnclosureTests.swift in Sources */,
 				8C21681F1F4DEABC00AB31BB /* ArrayTests.swift in Sources */,
 				8C9630A31F4F080C008C9505 /* RSSItemTests.swift in Sources */,
-				8C495F471F50AF3D00EBF21D /* XmlToRSSTests.swift in Sources */,
+				8C495F471F50AF3D00EBF21D /* XmlToRssTests.swift in Sources */,
 				8C9630B21F4F4441008C9505 /* XmlNodeTests.swift in Sources */,
 				8C9F255A1F4ECD8F002BA284 /* RSSImageTests.swift in Sources */,
 				8C9630AC1F4F24C6008C9505 /* XmlParserTests.swift in Sources */,

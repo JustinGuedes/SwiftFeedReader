@@ -1,5 +1,5 @@
 //
-//  XmlToRSSTests.swift
+//  XmlToRssTests.swift
 //  SwiftFeedReader_Tests
 //
 //  Created by Justin Guedes on 2017/08/25.
@@ -9,7 +9,7 @@
 import XCTest
 @testable import SwiftFeedReader
 
-class XmlToRSSTests: XCTestCase {
+class XmlToRssTests: XCTestCase {
     
     let basicRSS = """
 <rss version="2.0">
@@ -24,7 +24,7 @@ class XmlToRSSTests: XCTestCase {
     func testShouldParseBasicRSS() {
         let result: RSS
         do {
-            result = try XmlToRSS.getRSS(fromString: basicRSS)
+            result = try XmlToRss.getRSS(fromString: basicRSS)
         } catch {
             XCTFail("Failed to getRSS [reason: \(error)")
             return
@@ -52,7 +52,7 @@ class XmlToRSSTests: XCTestCase {
     func testShouldParseRSSWithCategories() {
         let result: RSS
         do {
-            result = try XmlToRSS.getRSS(fromString: rssWithCategories)
+            result = try XmlToRss.getRSS(fromString: rssWithCategories)
         } catch {
             XCTFail("Failed to getRSS [reason: \(error)")
             return
@@ -98,7 +98,7 @@ class XmlToRSSTests: XCTestCase {
     func testShouldParseRSSWithItems() {
         let result: RSS
         do {
-            result = try XmlToRSS.getRSS(fromString: rssWithItems)
+            result = try XmlToRss.getRSS(fromString: rssWithItems)
         } catch {
             XCTFail("Failed to getRSS [reason: \(error)")
             return

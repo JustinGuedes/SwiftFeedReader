@@ -1,11 +1,11 @@
 //
-//  XmlToRSS.swift
+//  XmlToRss.swift
 //  SwiftFeedReader
 //
 //  Created by Justin Guedes on 2017/08/25.
 //
 
-public struct XmlToRSS {
+public struct XmlToRss {
     
     private static let xmlParser = XmlParser()
     
