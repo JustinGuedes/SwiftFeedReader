@@ -5,7 +5,7 @@
 //  Created by Justin Guedes on 2017/08/24.
 //
 
-public extension RSSChannel {
+public extension RSS {
     
     struct Source {
         
@@ -13,8 +13,8 @@ public extension RSSChannel {
         /// from.
         ///
         /// Example: Tomalak's Realm
-        public let title: String
-        fileprivate static let _title = NamedParameter(apiDescription: "Its value is the name of the RSS channel that the item came from.",
+        public let name: String
+        fileprivate static let _name = NamedParameter(apiDescription: "Its value is the name of the RSS channel that the item came from.",
                                                        key: "source",
                                                        parameter: String.parameter)
         
@@ -33,21 +33,21 @@ public extension RSSChannel {
     
 }
 
-extension RSSChannel.Source: Equatable {
+extension RSS.Source: Equatable {
     
-    public static func ==(lhs: RSSChannel.Source, rhs: RSSChannel.Source) -> Bool {
-        return lhs.title == rhs.title &&
+    public static func ==(lhs: RSS.Source, rhs: RSS.Source) -> Bool {
+        return lhs.name == rhs.name &&
             lhs.url == rhs.url
     }
     
 }
 
-extension RSSChannel.Source {
+extension RSS.Source {
     
-    static var parameter: Parameter<RSSChannel.Source> {
+    static var parameter: Parameter<RSS.Source> {
         return Parameter(apiDescription: "source") {
             let dictParser = DictionaryParser(pure: makeSource)
-                <*> _title
+                <*> _name
                 <*> _url
             guard let dictionary = $0 as? [String: Any] else {
                 throw SwiftFeedReaderError.cannotParse("source - not correct format")

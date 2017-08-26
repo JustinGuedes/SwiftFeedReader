@@ -5,7 +5,7 @@
 //  Created by Justin Guedes on 2017/08/24.
 //
 
-public extension RSSChannel {
+public extension RSS {
     
     struct GUID {
         
@@ -31,18 +31,18 @@ public extension RSSChannel {
     
 }
 
-extension RSSChannel.GUID: Equatable {
+extension RSS.GUID: Equatable {
     
-    public static func ==(lhs: RSSChannel.GUID, rhs: RSSChannel.GUID) -> Bool {
+    public static func ==(lhs: RSS.GUID, rhs: RSS.GUID) -> Bool {
         return lhs.uniqueId == rhs.uniqueId &&
             lhs.isPermaLink == rhs.isPermaLink
     }
     
 }
 
-extension RSSChannel.GUID {
+extension RSS.GUID {
     
-    static var parameter: Parameter<RSSChannel.GUID> {
+    static var parameter: Parameter<RSS.GUID> {
         return Parameter(apiDescription: "guid") {
             let dictParser = DictionaryParser(pure: makeGUID)
                 <*> _uniqueId

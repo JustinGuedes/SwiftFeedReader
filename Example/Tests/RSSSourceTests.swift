@@ -11,7 +11,7 @@ import XCTest
 
 class RSSSourceTests: XCTestCase, XCTestCaseParameter {
     
-    let parameter = RSSChannel.Source.parameter
+    let parameter = RSS.Source.parameter
     
     let sourceDictionary: [String: Any] = ["source": "Example Source",
                                            "url": "http://www.google.com"]
@@ -39,8 +39,8 @@ class RSSSourceTests: XCTestCase, XCTestCaseParameter {
     }
     
     func testShouldParseDictionaryIntoSourceObject() {
-        let expectedSource = RSSChannel.Source(title: sourceDictionary["source"] as! String,
-                                               url: URL(string: sourceDictionary["url"] as! String)!)
+        let expectedSource = RSS.Source(name: sourceDictionary["source"] as! String,
+                                        url: URL(string: sourceDictionary["url"] as! String)!)
         
         XCTAssertEqualParameter(expectedSource, withValue: sourceDictionary)
     }

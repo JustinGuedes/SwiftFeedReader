@@ -5,7 +5,7 @@
 //  Created by Justin Guedes on 2017/08/22.
 //
 
-public extension RSSChannel {
+public extension RSS {
     
     /// Represents the web service provided by the channel.
     struct Cloud {
@@ -57,9 +57,9 @@ public extension RSSChannel {
     
 }
 
-extension RSSChannel.Cloud: Equatable {
+extension RSS.Cloud: Equatable {
     
-    public static func ==(lhs: RSSChannel.Cloud, rhs: RSSChannel.Cloud) -> Bool {
+    public static func ==(lhs: RSS.Cloud, rhs: RSS.Cloud) -> Bool {
         return lhs.domain == rhs.domain &&
             lhs.port == rhs.port &&
             lhs.path == rhs.path &&
@@ -69,9 +69,9 @@ extension RSSChannel.Cloud: Equatable {
     
 }
 
-extension RSSChannel.Cloud {
+extension RSS.Cloud {
     
-    static var parameter: Parameter<RSSChannel.Cloud> {
+    static var parameter: Parameter<RSS.Cloud> {
         return Parameter(apiDescription: "cloud") {
             let dictParser = DictionaryParser(pure: makeCloud)
                 <*> _domain

@@ -5,7 +5,7 @@
 //  Created by Justin Guedes on 2017/08/22.
 //
 
-public extension RSSChannel {
+public extension RSS {
     
     /// Represents an image of the channel.
     struct Image {
@@ -49,9 +49,9 @@ public extension RSSChannel {
     
 }
 
-extension RSSChannel.Image: Equatable {
+extension RSS.Image: Equatable {
     
-    public static func ==(lhs: RSSChannel.Image, rhs: RSSChannel.Image) -> Bool {
+    public static func ==(lhs: RSS.Image, rhs: RSS.Image) -> Bool {
         return lhs.url == rhs.url &&
             lhs.title == rhs.title &&
             lhs.link == rhs.link &&
@@ -61,9 +61,9 @@ extension RSSChannel.Image: Equatable {
     
 }
 
-extension RSSChannel.Image {
+extension RSS.Image {
     
-    static var parameter: Parameter<RSSChannel.Image> {
+    static var parameter: Parameter<RSS.Image> {
         return Parameter(apiDescription: "image") {
             let dictParser = DictionaryParser(pure: makeImage)
                 <*> _url

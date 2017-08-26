@@ -11,7 +11,7 @@ import XCTest
 
 class RSSChannelTests: XCTestCase, XCTestCaseParameter {
     
-    let parameter = RSSChannel.parameter
+    let parameter = RSS.Channel.parameter
     
     static let categories: [[String: Any]] = [["category": "Example"],
                                               ["category": "Example 2",
@@ -106,25 +106,25 @@ class RSSChannelTests: XCTestCase, XCTestCaseParameter {
     }
     
     func testShouldParseDictionaryWithOnlyRequiredFieldsIntoRSSChannelObject() {
-        let expectedChannel = RSSChannel(title: channelDictionaryWithRequiredFields["title"] as! String,
-                                         link: URL(string: channelDictionaryWithRequiredFields["link"] as! String)!,
-                                         description: channelDictionaryWithRequiredFields["description"] as! String,
-                                         language: .none,
-                                         copyright: .none,
-                                         managingEditor: .none,
-                                         webMaster: .none,
-                                         publicationDate: .none,
-                                         lastBuildDate: .none,
-                                         categories: .none,
-                                         generator: .none,
-                                         docs: .none,
-                                         cloud: .none,
-                                         timeToLive: .none,
-                                         image: .none,
-                                         textInput: .none,
-                                         skipHours: .none,
-                                         skipDays: .none,
-                                         items: .none)
+        let expectedChannel = RSS.Channel(title: channelDictionaryWithRequiredFields["title"] as! String,
+                                          link: URL(string: channelDictionaryWithRequiredFields["link"] as! String)!,
+                                          description: channelDictionaryWithRequiredFields["description"] as! String,
+                                          language: .none,
+                                          copyright: .none,
+                                          managingEditor: .none,
+                                          webMaster: .none,
+                                          publicationDate: .none,
+                                          lastBuildDate: .none,
+                                          categories: .none,
+                                          generator: .none,
+                                          docs: .none,
+                                          cloud: .none,
+                                          timeToLive: .none,
+                                          image: .none,
+                                          textInput: .none,
+                                          skipHours: .none,
+                                          skipDays: .none,
+                                          items: .none)
         
         XCTAssertEqualParameter(expectedChannel, withValue: channelDictionaryWithRequiredFields)
     }
@@ -133,30 +133,30 @@ class RSSChannelTests: XCTestCase, XCTestCaseParameter {
         let expectedLanguage = try! Language.parameter.parse(channelDictionary["language"]!)
         let expectedPublicationDate = try! Date.parameter.parse(channelDictionary["pubDate"]!)
         let expectedLastBuildDate = try! Date.parameter.parse(channelDictionary["lastBuildDate"]!)
-        let expectedCategories = try! Array.parameterOf(RSSChannel.Category.parameter).parse(channelDictionary["category"]!)
-        let expectedCloud = try! RSSChannel.Cloud.parameter.parse(channelDictionary["cloud"]!)
-        let expectedImage = try! RSSChannel.Image.parameter.parse(channelDictionary["image"]!)
-        let expectedTextInput = try! RSSChannel.TextInput.parameter.parse(channelDictionary["textInput"]!)
-        let expectedItems = try! Array.parameterOf(RSSChannel.Item.parameter).parse(channelDictionary["item"]!)
-        let expectedChannel = RSSChannel(title: channelDictionary["title"] as! String,
-                                         link: URL(string: channelDictionary["link"] as! String)!,
-                                         description: channelDictionary["description"] as! String,
-                                         language: expectedLanguage,
-                                         copyright: channelDictionary["copyright"] as? String,
-                                         managingEditor: channelDictionary["managingEditor"] as? String,
-                                         webMaster: channelDictionary["webMaster"] as? String,
-                                         publicationDate: expectedPublicationDate,
-                                         lastBuildDate: expectedLastBuildDate,
-                                         categories: expectedCategories,
-                                         generator: channelDictionary["generator"] as? String,
-                                         docs: URL(string: channelDictionary["docs"] as! String),
-                                         cloud: expectedCloud,
-                                         timeToLive: channelDictionary["ttl"] as? Int,
-                                         image: expectedImage,
-                                         textInput: expectedTextInput,
-                                         skipHours: channelDictionary["skipHours"] as? [Int],
-                                         skipDays: channelDictionary["skipDays"] as? [Int],
-                                         items: expectedItems)
+        let expectedCategories = try! Array.parameterOf(RSS.Category.parameter).parse(channelDictionary["category"]!)
+        let expectedCloud = try! RSS.Cloud.parameter.parse(channelDictionary["cloud"]!)
+        let expectedImage = try! RSS.Image.parameter.parse(channelDictionary["image"]!)
+        let expectedTextInput = try! RSS.TextInput.parameter.parse(channelDictionary["textInput"]!)
+        let expectedItems = try! Array.parameterOf(RSS.Item.parameter).parse(channelDictionary["item"]!)
+        let expectedChannel = RSS.Channel(title: channelDictionary["title"] as! String,
+                                          link: URL(string: channelDictionary["link"] as! String)!,
+                                          description: channelDictionary["description"] as! String,
+                                          language: expectedLanguage,
+                                          copyright: channelDictionary["copyright"] as? String,
+                                          managingEditor: channelDictionary["managingEditor"] as? String,
+                                          webMaster: channelDictionary["webMaster"] as? String,
+                                          publicationDate: expectedPublicationDate,
+                                          lastBuildDate: expectedLastBuildDate,
+                                          categories: expectedCategories,
+                                          generator: channelDictionary["generator"] as? String,
+                                          docs: URL(string: channelDictionary["docs"] as! String),
+                                          cloud: expectedCloud,
+                                          timeToLive: channelDictionary["ttl"] as? Int,
+                                          image: expectedImage,
+                                          textInput: expectedTextInput,
+                                          skipHours: channelDictionary["skipHours"] as? [Int],
+                                          skipDays: channelDictionary["skipDays"] as? [Int],
+                                          items: expectedItems)
         
         XCTAssertEqualParameter(expectedChannel, withValue: channelDictionary)
     }

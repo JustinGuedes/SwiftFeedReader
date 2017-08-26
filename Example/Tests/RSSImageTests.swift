@@ -11,7 +11,7 @@ import XCTest
 
 class RSSImageTests: XCTestCase, XCTestCaseParameter {
     
-    let parameter = RSSChannel.Image.parameter
+    let parameter = RSS.Image.parameter
     
     let imageWithDimensions: [String: Any] = ["url": "http://www.imageUrl.com",
                                               "title": "Image Title",
@@ -54,21 +54,21 @@ class RSSImageTests: XCTestCase, XCTestCaseParameter {
     }
     
     func testShouldParseDictionaryWithDimensionsIntoImageObject() {
-        let expectedImage = RSSChannel.Image(url: URL(string: imageWithDimensions["url"] as! String)!,
-                                             title: imageWithDimensions["title"] as! String,
-                                             link: URL(string: imageWithDimensions["link"] as! String)!,
-                                             width: imageWithDimensions["width"] as? Int,
-                                             height: imageWithDimensions["height"] as? Int)
+        let expectedImage = RSS.Image(url: URL(string: imageWithDimensions["url"] as! String)!,
+                                      title: imageWithDimensions["title"] as! String,
+                                      link: URL(string: imageWithDimensions["link"] as! String)!,
+                                      width: imageWithDimensions["width"] as? Int,
+                                      height: imageWithDimensions["height"] as? Int)
         
         XCTAssertEqualParameter(expectedImage, withValue: imageWithDimensions)
     }
     
     func testShouldParseDictionaryWithoutDimensionsIntoImageObject() {
-        let expectedImage = RSSChannel.Image(url: URL(string: imageWithoutDimensions["url"] as! String)!,
-                                             title: imageWithoutDimensions["title"] as! String,
-                                             link: URL(string: imageWithoutDimensions["link"] as! String)!,
-                                             width: .none,
-                                             height: .none)
+        let expectedImage = RSS.Image(url: URL(string: imageWithoutDimensions["url"] as! String)!,
+                                      title: imageWithoutDimensions["title"] as! String,
+                                      link: URL(string: imageWithoutDimensions["link"] as! String)!,
+                                      width: .none,
+                                      height: .none)
         
         XCTAssertEqualParameter(expectedImage, withValue: imageWithoutDimensions)
     }

@@ -5,7 +5,7 @@
 //  Created by Justin Guedes on 2017/08/22.
 //
 
-public extension RSSChannel {
+public extension RSS {
     
     /// Represents an item of the channel.
     struct Item {
@@ -96,9 +96,9 @@ public extension RSSChannel {
     
 }
 
-extension RSSChannel.Item: Equatable {
+extension RSS.Item: Equatable {
     
-    public static func ==(lhs: RSSChannel.Item, rhs: RSSChannel.Item) -> Bool {
+    public static func ==(lhs: RSS.Item, rhs: RSS.Item) -> Bool {
         return lhs.title == rhs.title &&
             lhs.link == rhs.link &&
             lhs.description == rhs.description &&
@@ -113,9 +113,9 @@ extension RSSChannel.Item: Equatable {
     
 }
 
-extension RSSChannel.Item {
+extension RSS.Item {
     
-    static var parameter: Parameter<RSSChannel.Item> {
+    static var parameter: Parameter<RSS.Item> {
         return Parameter(apiDescription: "item") {
             let dictParser = DictionaryParser(pure: makeItem)
                 <*> _title

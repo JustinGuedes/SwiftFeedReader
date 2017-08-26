@@ -5,7 +5,7 @@
 //  Created by Justin Guedes on 2017/08/24.
 //
 
-public extension RSSChannel {
+public extension RSS {
     
     /// Represents an enclosure of an RSS item.
     struct Enclosure {
@@ -41,9 +41,9 @@ public extension RSSChannel {
     
 }
 
-extension RSSChannel.Enclosure: Equatable {
+extension RSS.Enclosure: Equatable {
     
-    public static func ==(lhs: RSSChannel.Enclosure, rhs: RSSChannel.Enclosure) -> Bool {
+    public static func ==(lhs: RSS.Enclosure, rhs: RSS.Enclosure) -> Bool {
         return lhs.url == rhs.url &&
             lhs.length == rhs.length &&
             lhs.type == rhs.type
@@ -51,9 +51,9 @@ extension RSSChannel.Enclosure: Equatable {
     
 }
 
-extension RSSChannel.Enclosure {
+extension RSS.Enclosure {
     
-    static var parameter: Parameter<RSSChannel.Enclosure> {
+    static var parameter: Parameter<RSS.Enclosure> {
         return Parameter(apiDescription: "enclosure") {
             let dictParser = DictionaryParser(pure: makeEnclosure)
                 <*> _url

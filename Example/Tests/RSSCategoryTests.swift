@@ -11,7 +11,7 @@ import XCTest
 
 class RSSCategoryTests: XCTestCase, XCTestCaseParameter {
     
-    let parameter = RSSChannel.Category.parameter
+    let parameter = RSS.Category.parameter
     
     let categoryDictionaryWithDomain: [String: Any] = ["category": "Category Name",
                                                        "domain": "Domain"]
@@ -32,15 +32,15 @@ class RSSCategoryTests: XCTestCase, XCTestCaseParameter {
     }
     
     func testShouldParseDictionaryWithDomainIntoCategoryObject() {
-        let expectedCategory = RSSChannel.Category(name: categoryDictionaryWithDomain["category"] as! String,
-                                                   domain: categoryDictionaryWithDomain["domain"] as? String)
+        let expectedCategory = RSS.Category(name: categoryDictionaryWithDomain["category"] as! String,
+                                            domain: categoryDictionaryWithDomain["domain"] as? String)
         
         XCTAssertEqualParameter(expectedCategory, withValue: categoryDictionaryWithDomain)
     }
     
     func testShouldParseDictionaryWithoutDomainIntoCategoryObject() {
-        let expectedCategory = RSSChannel.Category(name: categoryDictionaryWithoutDomain["category"] as! String,
-                                                   domain: .none)
+        let expectedCategory = RSS.Category(name: categoryDictionaryWithoutDomain["category"] as! String,
+                                            domain: .none)
         
         XCTAssertEqualParameter(expectedCategory, withValue: categoryDictionaryWithoutDomain)
     }

@@ -11,7 +11,7 @@ import XCTest
 
 class RSSGUIDTests: XCTestCase, XCTestCaseParameter {
     
-    let parameter = RSSChannel.GUID.parameter
+    let parameter = RSS.GUID.parameter
     
     let guidDictionaryWithPermaLink: [String: Any] = ["guid": "unique",
                                                       "isPermaLink": true]
@@ -33,15 +33,15 @@ class RSSGUIDTests: XCTestCase, XCTestCaseParameter {
     }
     
     func testShouldParseDictionaryWithPermaLinkIntoGUIDObject() {
-        let expectedGuid = RSSChannel.GUID(uniqueId: guidDictionaryWithPermaLink["guid"] as! String,
-                                           isPermaLink: guidDictionaryWithPermaLink["isPermaLink"] as? Bool)
+        let expectedGuid = RSS.GUID(uniqueId: guidDictionaryWithPermaLink["guid"] as! String,
+                                    isPermaLink: guidDictionaryWithPermaLink["isPermaLink"] as? Bool)
         
         XCTAssertEqualParameter(expectedGuid, withValue: guidDictionaryWithPermaLink)
     }
     
     func testShouldParseDictionaryWithoutPermaLinkIntoGUIDObject() {
-        let expectedGuid = RSSChannel.GUID(uniqueId: guidDictionaryWithoutPermaLink["guid"] as! String,
-                                           isPermaLink: .none)
+        let expectedGuid = RSS.GUID(uniqueId: guidDictionaryWithoutPermaLink["guid"] as! String,
+                                    isPermaLink: .none)
         
         XCTAssertEqualParameter(expectedGuid, withValue: guidDictionaryWithoutPermaLink)
     }

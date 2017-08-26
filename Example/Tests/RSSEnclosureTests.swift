@@ -11,7 +11,7 @@ import XCTest
 
 class RSSEnclosureTests: XCTestCase, XCTestCaseParameter {
     
-    let parameter = RSSChannel.Enclosure.parameter
+    let parameter = RSS.Enclosure.parameter
     
     let enclosureDictionary: [String: Any] = ["url": "http://www.google.com",
                                               "length": 123132,
@@ -48,9 +48,9 @@ class RSSEnclosureTests: XCTestCase, XCTestCaseParameter {
     }
     
     func testShouldParseDictionaryIntoEnclosureObject() {
-        let expectedEnclosure = RSSChannel.Enclosure(url: URL(string: enclosureDictionary["url"] as! String)!,
-                                                     length: enclosureDictionary["length"] as! Int,
-                                                     type: MimeType(rawValue: enclosureDictionary["type"] as! String)!)
+        let expectedEnclosure = RSS.Enclosure(url: URL(string: enclosureDictionary["url"] as! String)!,
+                                              length: enclosureDictionary["length"] as! Int,
+                                              type: MimeType(rawValue: enclosureDictionary["type"] as! String)!)
         
         XCTAssertEqualParameter(expectedEnclosure, withValue: enclosureDictionary)
     }

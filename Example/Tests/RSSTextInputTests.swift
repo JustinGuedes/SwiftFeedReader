@@ -11,7 +11,7 @@ import XCTest
 
 class RSSTextInputTests: XCTestCase, XCTestCaseParameter {
     
-    let parameter = RSSChannel.TextInput.parameter
+    let parameter = RSS.TextInput.parameter
     
     let textInputDictionary: [String: Any] = ["title": "Text Input Title",
                                               "description": "Description",
@@ -57,10 +57,10 @@ class RSSTextInputTests: XCTestCase, XCTestCaseParameter {
     }
     
     func testShouldParseDictionaryIntoTextInputObject() {
-        let expectedTextInput = RSSChannel.TextInput(title: textInputDictionary["title"] as! String,
-                                                     description: textInputDictionary["description"] as! String,
-                                                     name: textInputDictionary["name"] as! String,
-                                                     link: URL(string: textInputDictionary["link"] as! String)!)
+        let expectedTextInput = RSS.TextInput(title: textInputDictionary["title"] as! String,
+                                              description: textInputDictionary["description"] as! String,
+                                              name: textInputDictionary["name"] as! String,
+                                              link: URL(string: textInputDictionary["link"] as! String)!)
         
         XCTAssertEqualParameter(expectedTextInput, withValue: textInputDictionary)
     }

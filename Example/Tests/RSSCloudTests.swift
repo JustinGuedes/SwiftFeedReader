@@ -11,7 +11,7 @@ import XCTest
 
 class RSSCloudTests: XCTestCase, XCTestCaseParameter {
     
-    let parameter = RSSChannel.Cloud.parameter
+    let parameter = RSS.Cloud.parameter
     
     let cloudDictionary: [String: Any] = ["domain": "radio.xmlstoragesystem.com",
                                           "port": 80,
@@ -66,11 +66,11 @@ class RSSCloudTests: XCTestCase, XCTestCaseParameter {
     }
     
     func testShouldParseDictionaryIntoCloudObject() {
-        let expectedCloud = RSSChannel.Cloud(domain: cloudDictionary["domain"] as! String,
-                                             port: cloudDictionary["port"] as! Int,
-                                             path: cloudDictionary["path"] as! String,
-                                             registerProcedure: cloudDictionary["registerProcedure"] as! String,
-                                             protocol: cloudDictionary["protocol"] as! String)
+        let expectedCloud = RSS.Cloud(domain: cloudDictionary["domain"] as! String,
+                                      port: cloudDictionary["port"] as! Int,
+                                      path: cloudDictionary["path"] as! String,
+                                      registerProcedure: cloudDictionary["registerProcedure"] as! String,
+                                      protocol: cloudDictionary["protocol"] as! String)
         
         XCTAssertEqualParameter(expectedCloud, withValue: cloudDictionary)
     }

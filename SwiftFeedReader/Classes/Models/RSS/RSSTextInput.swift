@@ -5,7 +5,7 @@
 //  Created by Justin Guedes on 2017/08/22.
 //
 
-public extension RSSChannel {
+public extension RSS {
     
     /// Represents a text input box for the channel.
     struct TextInput {
@@ -43,9 +43,9 @@ public extension RSSChannel {
     
 }
 
-extension RSSChannel.TextInput: Equatable {
+extension RSS.TextInput: Equatable {
     
-    public static func ==(lhs: RSSChannel.TextInput, rhs: RSSChannel.TextInput) -> Bool {
+    public static func ==(lhs: RSS.TextInput, rhs: RSS.TextInput) -> Bool {
         return lhs.title == rhs.title &&
             lhs.description == rhs.description &&
             lhs.name == rhs.name &&
@@ -54,9 +54,9 @@ extension RSSChannel.TextInput: Equatable {
     
 }
 
-extension RSSChannel.TextInput {
+extension RSS.TextInput {
     
-    static var parameter: Parameter<RSSChannel.TextInput> {
+    static var parameter: Parameter<RSS.TextInput> {
         return Parameter(apiDescription: "text input") {
             let dictParser = DictionaryParser(pure: makeTextInput)
                 <*> _title

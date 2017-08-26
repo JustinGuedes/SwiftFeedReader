@@ -5,7 +5,7 @@
 //  Created by Justin Guedes on 2017/08/22.
 //
 
-public extension RSSChannel {
+public extension RSS {
     
     /// Category that the channel belongs to.
     struct Category {
@@ -33,18 +33,18 @@ public extension RSSChannel {
     
 }
 
-extension RSSChannel.Category: Equatable {
+extension RSS.Category: Equatable {
     
-    public static func ==(lhs: RSSChannel.Category, rhs: RSSChannel.Category) -> Bool {
+    public static func ==(lhs: RSS.Category, rhs: RSS.Category) -> Bool {
         return lhs.name == rhs.name &&
             lhs.domain == rhs.domain
     }
     
 }
 
-extension RSSChannel.Category {
+extension RSS.Category {
     
-    static var parameter: Parameter<RSSChannel.Category> {
+    static var parameter: Parameter<RSS.Category> {
         return Parameter(apiDescription: "category") {
             let dictParser = DictionaryParser(pure: makeCategory)
                 <*> _name

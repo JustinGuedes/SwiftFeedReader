@@ -39,7 +39,7 @@ public extension XmlNode {
             return attributesToJson(schema) ?? toJson(value, forName: name, withSchema: schema)
         }
         
-        var jsonDictionary: [String: Any] = [:]
+        var jsonDictionary: [String: Any] = attributes
         children.forEach { node in
             guard let value = jsonDictionary[node.name] else {
                 return jsonDictionary[node.name] = node.toJson(schema)
