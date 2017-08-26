@@ -7,7 +7,6 @@
 //
 
 import UIKit
-@testable import SwiftFeedReader
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -16,15 +15,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-        let url = URL(string: "https://www.technologyreview.com/stories.rss")!
-
-        do {
-            let rss = try XmlToRSS.getRSS(fromUrl: url)
-            dump(rss)
-        } catch {
-            print(error)
-        }
-        
         // Override point for customization after application launch.
         return true
     }
