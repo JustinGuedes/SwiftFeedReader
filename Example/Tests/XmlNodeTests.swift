@@ -1,5 +1,5 @@
 //
-//  XmlNodeTests.swift
+//  XMLNodeTests.swift
 //  SwiftFeedReader_Tests
 //
 //  Created by Justin Guedes on 2017/08/24.
@@ -9,10 +9,10 @@
 import XCTest
 @testable import SwiftFeedReader
 
-class XmlNodeTests: XCTestCase {
+class XMLNodeTests: XCTestCase {
     
     func testShouldConvertVeryBasicXmlToJson() {
-        let basicXml = XmlNode(name: "root")
+        let basicXml = XMLNode(name: "root")
         basicXml.updateValue("value")
         
         let result = basicXml.toJson()
@@ -38,8 +38,8 @@ class XmlNodeTests: XCTestCase {
             
         }
         
-        let rootXml = XmlNode(name: "root")
-        let childXml = XmlNode(name: "example")
+        let rootXml = XMLNode(name: "root")
+        let childXml = XMLNode(name: "example")
         childXml.updateValue("value")
         rootXml.appendChild(childXml)
         
@@ -70,10 +70,10 @@ class XmlNodeTests: XCTestCase {
             
         }
         
-        let rootXml = XmlNode(name: "root")
-        let childXml = XmlNode(name: "example")
+        let rootXml = XMLNode(name: "root")
+        let childXml = XMLNode(name: "example")
         childXml.updateValue("value")
-        let childXml2 = XmlNode(name: "example2")
+        let childXml2 = XMLNode(name: "example2")
         childXml2.updateValue("value2")
         rootXml.appendChild(childXml)
         rootXml.appendChild(childXml2)
@@ -109,7 +109,7 @@ class XmlNodeTests: XCTestCase {
             
         }
         
-        let rootXml = XmlNode(name: "root",
+        let rootXml = XMLNode(name: "root",
                               attributes: ["example": "value",
                                            "example2": "value2"])
         rootXml.updateValue("rootValue")
@@ -163,10 +163,10 @@ class XmlNodeTests: XCTestCase {
             
         }
         
-        let rootXml = XmlNode(name: "root")
-        let childXml = XmlNode(name: "example",
+        let rootXml = XMLNode(name: "root")
+        let childXml = XMLNode(name: "example",
                                attributes: ["attr": "ibute"])
-        let childXml2 = XmlNode(name: "example2")
+        let childXml2 = XMLNode(name: "example2")
         childXml2.updateValue("value")
         rootXml.appendChild(childXml)
         rootXml.appendChild(childXml2)
@@ -216,12 +216,12 @@ class XmlNodeTests: XCTestCase {
             }
         }
         
-        let rootXml = XmlNode(name: "root")
-        let childXml = XmlNode(name: "example")
-        let innerChildXml = XmlNode(name: "attr")
+        let rootXml = XMLNode(name: "root")
+        let childXml = XMLNode(name: "example")
+        let innerChildXml = XMLNode(name: "attr")
         innerChildXml.updateValue("ibute")
         childXml.appendChild(innerChildXml)
-        let childXml2 = XmlNode(name: "example2")
+        let childXml2 = XMLNode(name: "example2")
         childXml2.updateValue("value")
         rootXml.appendChild(childXml)
         rootXml.appendChild(childXml2)
@@ -251,8 +251,8 @@ class XmlNodeTests: XCTestCase {
             
         }
         
-        let rootXml = XmlNode(name: "root")
-        let childXml = XmlNode(name: "example")
+        let rootXml = XMLNode(name: "root")
+        let childXml = XMLNode(name: "example")
         childXml.updateValue("100")
         rootXml.appendChild(childXml)
         
@@ -281,8 +281,8 @@ class XmlNodeTests: XCTestCase {
             
         }
         
-        let rootXml = XmlNode(name: "root")
-        let childXml = XmlNode(name: "example")
+        let rootXml = XMLNode(name: "root")
+        let childXml = XMLNode(name: "example")
         childXml.updateValue("100")
         rootXml.appendChild(childXml)
         

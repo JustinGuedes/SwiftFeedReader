@@ -1,5 +1,5 @@
 //
-//  XmlParserTests.swift
+//  XMLParserTests.swift
 //  SwiftFeedReader_Tests
 //
 //  Created by Justin Guedes on 2017/08/24.
@@ -9,9 +9,9 @@
 import XCTest
 @testable import SwiftFeedReader
 
-class XmlParserTests: XCTestCase {
+class XMLParserTests: XCTestCase {
     
-    let parser = XmlParser()
+    let parser = XMLParser()
     
     func testShouldParseSimpleXml() {
         let basicXml = "<example>Title</example>"
@@ -32,7 +32,7 @@ class XmlParserTests: XCTestCase {
         XCTAssertEqual("example", result.name)
         XCTAssertEqual("Title", result.value)
         XCTAssertEqual(1, result.attributes.count)
-        XCTAssertEqual("Attribute", result.attributes["e"] as! String)
+        XCTAssertEqual("Attribute", result.attributes["e"])
         XCTAssertEqual(0, result.children.count)
     }
     

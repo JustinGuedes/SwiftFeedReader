@@ -29,10 +29,10 @@ public extension RSS {
         /// Standard MIME type of the enclosure.
         ///
         /// Example: audio/mpeg
-        public let type: MimeType
+        public let type: MIMEType
         fileprivate static let _type = NamedParameter(apiDescription: "Standard MIME type of the enclosure.",
                                                       key: "type",
-                                                      parameter: MimeType.parameter)
+                                                      parameter: MIMEType.parameter)
         
         /// Curried version of the initialiser.
         fileprivate static let makeEnclosure = curry(Enclosure.init)

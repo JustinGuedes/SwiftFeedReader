@@ -1,13 +1,13 @@
 //
-//  XmlSchemeType.swift
+//  XMLSchemeType.swift
 //  SwiftFeedReader
 //
 //  Created by Justin Guedes on 2017/08/25.
 //
 
-public typealias XmlSchema = [String: XmlSchemeType]
+public typealias XmlSchema = [String: XMLSchemeType]
 
-public enum XmlSchemeType {
+public enum XMLSchemeType {
     case string
     case int
     case bool

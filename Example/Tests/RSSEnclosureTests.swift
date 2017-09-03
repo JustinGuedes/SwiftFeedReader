@@ -50,7 +50,7 @@ class RSSEnclosureTests: XCTestCase, XCTestCaseParameter {
     func testShouldParseDictionaryIntoEnclosureObject() {
         let expectedEnclosure = RSS.Enclosure(url: URL(string: enclosureDictionary["url"] as! String)!,
                                               length: enclosureDictionary["length"] as! Int,
-                                              type: MimeType(rawValue: enclosureDictionary["type"] as! String)!)
+                                              type: MIMEType(rawValue: enclosureDictionary["type"] as! String)!)
         
         XCTAssertEqualParameter(expectedEnclosure, withValue: enclosureDictionary)
     }

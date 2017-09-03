@@ -44,7 +44,7 @@ class RSSTests: XCTestCase, XCTestCaseParameter {
     
     func testShouldParseDictionaryIntoRSSObject() {
         let expectedRss = RSS(version: rssDictionary["version"] as! String,
-                              channel: try! RSS.Channel.parameter.parse(rssDictionary["channel"] as! Any))
+                              channel: try! RSS.Channel.parameter.parse(rssDictionary["channel"] as Any))
         
         XCTAssertEqualParameter(expectedRss, withValue: rssDictionary)
     }

@@ -28,7 +28,7 @@ To get an `RSS` struct, either provide a string of the xml contents or a url poi
 let url = URL(string: "https://feeds.rss")!
 let rss: RSS
 do {
-  rss = try XmlToRss.getRSS(fromUrl: url)
+  rss = try XML.getRSS(fromUrl: url)
 } catch {
   print(error)
 }

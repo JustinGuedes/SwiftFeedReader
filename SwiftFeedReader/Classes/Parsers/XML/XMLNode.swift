@@ -1,17 +1,17 @@
 //
-//  XmlNode.swift
+//  XMLNode.swift
 //  SwiftFeedReader
 //
 //  Created by Justin Guedes on 2017/08/24.
 //
 
-public class XmlNode {
+public class XMLNode {
     
     public let name: String
     public fileprivate(set) var value: String
     public let attributes: [String: String]
-    public fileprivate(set) var parent: XmlNode?
-    public fileprivate(set) var children: [XmlNode]
+    public fileprivate(set) var parent: XMLNode?
+    public fileprivate(set) var children: [XMLNode]
     
     init(name: String) {
         self.name = name
@@ -32,7 +32,7 @@ public class XmlNode {
 }
 
 // MARK: - Public Implementation
-public extension XmlNode {
+public extension XMLNode {
     
     func toJson(_ schema: XmlSchema = [:]) -> Any {
         guard children.count > 0 else {
@@ -59,9 +59,9 @@ public extension XmlNode {
 }
 
 // MARK: - Internal Implementation
-extension XmlNode {
+extension XMLNode {
     
-    func appendChild(_ child: XmlNode) {
+    func appendChild(_ child: XMLNode) {
         children.append(child)
         child.parent = self
     }
@@ -73,7 +73,7 @@ extension XmlNode {
 }
 
 // MARK: - Private Implementation
-fileprivate extension XmlNode {
+fileprivate extension XMLNode {
 
     func toJson(_ value: String, forName name: String, withSchema schema: XmlSchema) -> Any {
         return schema[name]?.cast(value: value, withName: name) ?? value

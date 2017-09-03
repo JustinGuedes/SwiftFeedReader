@@ -1,5 +1,5 @@
 //
-//  MimeType.swift
+//  MIMEType.swift
 //  SwiftFeedReader
 //
 //  Created by Justin Guedes on 2017/08/24.
@@ -12,7 +12,7 @@ public enum MediaType {
     case unknown
 }
 
-public enum MimeType: RawRepresentable {
+public enum MIMEType: RawRepresentable {
     
     case aac // AAC audio file
     case abw // AbiWord document
@@ -232,12 +232,12 @@ public enum MimeType: RawRepresentable {
     
 }
 
-extension MimeType {
+extension MIMEType {
     
-    static var parameter: Parameter<MimeType> {
+    static var parameter: Parameter<MIMEType> {
         return Parameter(apiDescription: "mime type") {
             guard let mimeTypeString = $0 as? String,
-                let mimeType = MimeType(rawValue: mimeTypeString) else {
+                let mimeType = MIMEType(rawValue: mimeTypeString) else {
                     throw SwiftFeedReaderError.cannotParse("mime type")
             }
             

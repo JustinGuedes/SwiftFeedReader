@@ -1,13 +1,13 @@
 //
-//  XmlToRss.swift
+//  XML.swift
 //  SwiftFeedReader
 //
 //  Created by Justin Guedes on 2017/08/25.
 //
 
-public struct XmlToRss {
+public struct XML {
     
-    private static let xmlParser = XmlParser()
+    private static let xmlParser = XMLParser()
     
     public static func getRSS(fromUrl url: URL) throws -> RSS {
         let xml = xmlParser.parse(url: url)
@@ -19,7 +19,7 @@ public struct XmlToRss {
         return try getRSS(fromXmlNode: xml)
     }
     
-    private static func getRSS(fromXmlNode xml: XmlNode) throws -> RSS {
+    private static func getRSS(fromXmlNode xml: XMLNode) throws -> RSS {
         let json = xml.toJson(RSS.schema)
         
         return try RSS.parameter.parse(json)
